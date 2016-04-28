@@ -23,7 +23,7 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
   # Base box.
-  config.vm.box = "xnerv/standard-debian-7.9.0-i386.box"
+  config.vm.box = "ubuntu/trusty64"
   
   # Shared folders.
   config.vm.synced_folder "./", "/vagrant"
