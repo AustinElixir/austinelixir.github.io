@@ -195,10 +195,8 @@ Now we're going to create a phoenix project called `vanilla_phx` and test the se
 cd /vagrant
 mix phoenix.new vanilla_phx
 cd vanilla_phx
-mix deps.get
 sed -i 's/vanilla_phx_dev/vanilla/' /vagrant/vanilla_phx/config/dev.exs
 mix etco.create
-npm install
 mix phoenix.server
 {% endhighlight %}
 
