@@ -6,6 +6,7 @@
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://austinerlang.github.io"
 baseurl: ""
+port: 4001
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
