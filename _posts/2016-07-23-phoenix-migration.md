@@ -339,7 +339,7 @@ post_path  PATCH  /posts/:id       VanillaPhx.PostController :update
 
 > Note the presence of `post_path` and the atoms `:edit`, `:update`, and `:index` to the right. This will be key for URL generation in the templates.
 
-- `controller/post_controller.ex`
+- `controllers/post_controller.ex`
 
 {% highlight elixir %}
 defmodule VanillaPhx.PostController do
