@@ -41,6 +41,14 @@ author:
   # linkedin: yourlink  # eg. "pub/dean-attali/8/946/143"
   # stackoverflow: yourlink  # eg. "3943160/daattali"
 
+# authors:
+#   tesp0:
+#     name: Anthony Esposito
+#     url: https://www.linkedin.com/in/tesp0
+#     github: tesp0
+#     linkedin: tesp0
+#     twitter: tesp0
+
 # Select which links to show in the footer
 footer-links-active:
   rss: false

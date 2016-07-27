@@ -65,6 +65,9 @@
 			<h2 class="{{ include.type }}-subheading">{{ page.subtitle }}</h2>
 			{% endif %}
 		  {% endif %}
+
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{page.tweeturl}}&via=austinerlang" data-size="large">Tweet</a>
+      <br/>
 		  
 		  {% if include.type == "post" %}
 		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
@@ -79,7 +82,7 @@
             <ul class="list-inline text-left footer-links">
               {% if page.author_twitter %}
                 <li>
-                  <a href="{{ page.author_twitter }}" target="_blank" title="Twitter">
+                  <a href="https://twitter.com/{{ page.author_twitter }}" target="_blank" title="Twitter">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -89,7 +92,7 @@
               {% endif %}
               {% if page.author_linkedin %}
                 <li>
-                  <a href="{{ page.author_linkedin }}" target="_blank" title="Linkedin">
+                  <a href="https://www.linkedin.com/in/{{ page.author_linkedin }}" target="_blank" title="Linkedin">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -99,7 +102,7 @@
               {% endif %}
               {% if page.author_github %}
                 <li>
-                  <a href="{{ page.author_github }}" target="_blank" title="Github">
+                  <a href="https://github.com/{{ page.author_github }}" target="_blank" title="Github">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -109,7 +112,7 @@
               {% endif %}
               {% if page.author_facebook %}
                 <li>
-                  <a href="{{ page.author_facebook }}" target="_blank" title="Facebook">
+                  <a href="https://facebook.com/{{ page.author_facebook }}" target="_blank" title="Facebook">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
