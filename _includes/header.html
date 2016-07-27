@@ -64,12 +64,10 @@
 			{% else %}
 			<h2 class="{{ include.type }}-subheading">{{ page.subtitle }}</h2>
 			{% endif %}
-		  {% endif %}
-
+		  {% endif %}	  
+		  {% if include.type == "post" %}
       <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{page.tweeturl}}&via=austinerlang" data-size="large">Tweet</a>
       <br/>
-		  
-		  {% if include.type == "post" %}
 		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
       <br/>
         {% if page.author %}
