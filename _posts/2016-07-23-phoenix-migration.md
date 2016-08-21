@@ -2,11 +2,7 @@
 layout: post
 title: Migrating a LAMP Stack Application to the Phoenix Framework
 tweeturl: http%3A%2F%2Faustinerlang.org%2F2016-07-23-phoenix-migration%2F
-author: Anthony Esposito
-author_url: https://www.linkedin.com/in/tesp0
-author_linkedin: tesp0
-author_twitter: tesp0
-author_github: tesp0
+author: tesp0
 ---
 
 I have an application with around 100K lines of backend code written in Perl served up in a traditional LAMP stack. I'd like to migrate this application to the Phoenix Framework and I've documented a few ideas that I hope may be helpful to you if you are considering the same option. I'll demonstrate using PHP as it's the more common case.

@@ -38,7 +38,11 @@
 		  {% if include.type == "post" %}
       <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
       <br/>
-      <span class="post-meta">Author {{ page.author }}</span>
+        {% if site.authors.[page.author].url %}
+          <span class="post-meta">Author: <a target="_blank" href="{{ site.authors.[page.author].url }}">{{ site.authors.[page.author].name }}</a></span>
+        {% else %}
+          <span class="post-meta">Author: {{ site.authors.[page.author].name }}</span>
+        {% endif %}
 		  {% endif %}
         </div>
       </div>
@@ -66,21 +70,22 @@
 			{% endif %}
 		  {% endif %}	  
 		  {% if include.type == "post" %}
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{page.tweeturl}}&via=austinerlang" data-size="large">Tweet</a>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{ site.url | uri_escape }}{{ page.url | uri_escape }}&via=austinerlang" data-size="large">Tweet</a>
       <br/>
+
 		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
       <br/>
         {% if page.author %}
-          {% if page.author_url %}
-            <span class="post-meta">Author: <a target="_blank" href="{{ page.author_url }}">{{ page.author }}</a></span>
+          {% if site.authors.[page.author].url %}
+            <span class="post-meta">Author: <a target="_blank" href="{{ site.authors.[page.author].url }}">{{ site.authors.[page.author].name }}</a></span>
           {% else %}
-            <span class="post-meta">Author: {{ page.author }}</span>
+            <span class="post-meta">Author: {{ site.authors.[page.author].name }}</span>
           {% endif %}
-          {% if page.author_twitter or page.author_linkedin or page.author_github or page.author_facebook %}
+          {% if site.authors.[page.author].twitter or site.authors.[page.author].linkedin or site.authors.[page.author].github or site.authors.[page.author].facebook %}
             <ul class="list-inline text-left footer-links">
-              {% if page.author_twitter %}
+              {% if site.authors.[page.author].twitter %}
                 <li>
-                  <a href="https://twitter.com/{{ page.author_twitter }}" target="_blank" title="Twitter">
+                  <a href="https://twitter.com/{{ site.authors.[page.author].twitter }}" target="_blank" title="Twitter">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -88,9 +93,9 @@
                   </a>
                 </li>
               {% endif %}
-              {% if page.author_linkedin %}
+              {% if site.authors.[page.author].linkedin %}
                 <li>
-                  <a href="https://www.linkedin.com/in/{{ page.author_linkedin }}" target="_blank" title="Linkedin">
+                  <a href="https://www.linkedin.com/in/{{ site.authors.[page.author].linkedin }}" target="_blank" title="Linkedin">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -98,9 +103,9 @@
                   </a>
                 </li>
               {% endif %}
-              {% if page.author_github %}
+              {% if site.authors.[page.author].github %}
                 <li>
-                  <a href="https://github.com/{{ page.author_github }}" target="_blank" title="Github">
+                  <a href="https://github.com/{{ site.authors.[page.author].github }}" target="_blank" title="Github">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -108,9 +113,9 @@
                   </a>
                 </li>
               {% endif %}
-              {% if page.author_facebook %}
+              {% if site.authors.[page.author].facebook %}
                 <li>
-                  <a href="https://facebook.com/{{ page.author_facebook }}" target="_blank" title="Facebook">
+                  <a href="https://facebook.com/{{ site.authors.[page.author].facebook }}" target="_blank" title="Facebook">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
